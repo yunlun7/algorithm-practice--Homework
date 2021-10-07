@@ -10,7 +10,7 @@ int f(int n)
 	else if (n == 2)
 		return f2;
 	else
-		for (int i = 0; i < n; i++)
+		for (int i = 3; i <= n; i++)
 		{
 			F = f1 + f2;
 			f2 = f1;
@@ -22,7 +22,7 @@ int f(int n)
 int main()
 {
 	int n;
-	cout << "ÇëÊäÈëÌ¨½×¸öÊın£º" << endl;
+	cout << "Ã‡Ã«ÃŠÃ¤ÃˆÃ«ÃŒÂ¨Â½Ã—Â¸Ã¶ÃŠÃ½nÂ£Âº" << endl;
 	cin >> n;
 	cout << f(n);
 	return 0;
