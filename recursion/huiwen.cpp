@@ -31,12 +31,12 @@ int Recursive_huiwen(char* str, int n)
 
 }
 
-/*递推时间复杂度分析：由for循环可知，共循环n/2次，则时间复杂度为O(n)*/
+/*閫掓帹鏃堕棿澶嶆潅搴﹀垎鏋愶細鐢眆or寰幆鍙煡锛屽叡寰幆n/2娆★紝鍒欐椂闂村鏉傚害涓篛(n)*/
 int NotRecursive(char q[], int n)
 {
 	int first = 0;
 	int end = n - 1;
-	int a = 1;//通过a的值来判断是否是回文字符串
+	int a = 1;//閫氳繃a鐨勫�兼潵鍒ゆ柇鏄惁鏄洖鏂囧瓧绗︿覆
 	for (first = 0, end = n - 1; first <= n / 2; first++, end--)
 	{
 		if (q[first] == q[end])
@@ -101,7 +101,7 @@ int main()
 	cout << endl;
 	cout << "==============================NotRecursive: " << endl;
 	char d[3] = { 'a','a','a' };
-	if (Recursive_huiwen(d, 3) == 1)
+	if (NotRecursive(d, 3) == 1)
 	{
 		Output(d, 3);
 		cout << " is No!" << endl;
@@ -112,7 +112,7 @@ int main()
 		cout << " is Yes!" << endl;
 	}
 	char e[4] = { 'a','a','a','c'};
-	if (Recursive_huiwen(e, 4) == 1)
+	if (NotRecursive(e, 4) == 1)
 	{
 		Output(e, 4);
 		cout << " is No!" << endl;
@@ -123,7 +123,7 @@ int main()
 		cout << " is Yes!" << endl;
 	}
 	char f[5] = { 'a','c','a','d','a'};
-	if (Recursive_huiwen(f, 5) == 1)
+	if (NotRecursive(f, 5) == 1)
 	{
 		Output(f, 5);
 		cout << " is No!" << endl;
